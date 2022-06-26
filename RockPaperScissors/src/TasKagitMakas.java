@@ -14,14 +14,14 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 
 	public TasKagitMakas() {
 		
-		// Oyuncu Skorunu gösterme
+		// Oyuncu Skorunu gÃ¶sterme
 		oyuncu = new JLabel("Oyuncu: 0");
 		oyuncu.setBounds(65,10,200,30);
 		oyuncu.setFont(oyuncu.getFont().deriveFont(25.0f));
 		oyuncu.setForeground(new Color(0x22a6b3));
 		add(oyuncu);
 		
-		// Bilgisayar skoru gösterme
+		// Bilgisayar skoru gÃ¶sterme
 		bilgisayarJLabel = new JLabel("Bilgisayar: 0");
 		bilgisayarJLabel.setText("Bilgisayar: 0");
 		bilgisayarJLabel.setBounds(505,10,200,30);
@@ -29,21 +29,21 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		bilgisayarJLabel.setForeground(new Color(0x22a6b3));
 		add(bilgisayarJLabel);
 		
-		oyuncu_secim = new JLabel("Oyuncu Seçimi");	
-		oyuncu_secim.setText("Oyuncu Seçimi");
+		oyuncu_secim = new JLabel("Oyuncu SeÃ§imi");	
+		oyuncu_secim.setText("Oyuncu SeÃ§imi");
 		oyuncu_secim.setBounds(40,120,200,30);
 		oyuncu_secim.setFont(oyuncu_secim.getFont().deriveFont(25.0f));
 		oyuncu_secim.setForeground(new Color(0x30336b));
 		add(oyuncu_secim);
 		
-		pc_secim = new JLabel("Bilgisayar Seçimi");
-		pc_secim.setText("Bilgisayar Seçimi");
+		pc_secim = new JLabel("Bilgisayar SeÃ§imi");
+		pc_secim.setText("Bilgisayar SeÃ§imi");
 		pc_secim.setBounds(480,120,200,30);
 		pc_secim.setFont(pc_secim.getFont().deriveFont(24.0f));
 		pc_secim.setForeground(new Color(0x30336b));
 		add(pc_secim);
 		
-		// bilgisayar random yaptýðý seçim
+		// bilgisayar random yaptigi secim
 		pcJLabel = new JLabel("");
 		pcJLabel.setText("");
 		pcJLabel.setVisible(false);
@@ -51,7 +51,7 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		pcJLabel.setFont(pcJLabel.getFont().deriveFont(24.0f));
 		add(pcJLabel);
 		
-		// Oyuncunun seçimi
+		// Oyuncunun seÃ§imi
 		oyuncuJLabel = new JLabel("");
 		oyuncuJLabel.setText("");
 		oyuncuJLabel.setVisible(false);
@@ -59,7 +59,7 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		oyuncuJLabel.setFont(oyuncuJLabel.getFont().deriveFont(24.0f));
 		add(oyuncuJLabel);
 		
-		// Taþ butonu
+		// TaÃ¾ butonu
 		ImageIcon tasIcon = new ImageIcon("rock2.png");
 		tasButton = new JButton(tasIcon);
 		tasButton.setBackground(Color.white);
@@ -68,7 +68,7 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		add(tasButton);
 		
 		
-		// Kaðýt butonu
+		// KaÃ°Ã½t butonu
 		ImageIcon kagitIcon = new ImageIcon("paper2.png");
 		kagitButton = new JButton(kagitIcon);
 		kagitButton.setBackground(Color.white);
@@ -84,7 +84,7 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		makasButton.setBounds(510,400,200,150);
 		add(makasButton);
 		
-		// Oyuna baþlama butonu
+		// Oyuna baÃ¾lama butonu
 		oynaButton = new JButton();
 		oynaButton.setText("Oyna");
 		oynaButton.setBounds(270,180,150,50);
@@ -92,8 +92,8 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		add(oynaButton);
 
 		
-		// Çýkýþ butonu
-		cikisButton = new JButton("Çýkýþ");
+		// Ã‡Ã½kÃ½Ã¾ butonu
+		cikisButton = new JButton("CIKIS");
 		cikisButton.setBounds(270,250,150,50);
 		cikisButton.setFocusable(false);
 		add(cikisButton);
@@ -108,17 +108,17 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		
 		
 		this.setSize(750,600); // Frame'in boyutu		
-		this.getContentPane().setBackground(new Color(0xffeaa7)); // Baþýna 0x koyarak istediðimiz rengin kodunu yazabiliriz
-		this.setResizable(false); // Frame'in boyutunun deðiþtirilmemesi
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // x'e basýldýðýnda uygulamanýn kapanmasý/sonlanmasý
+		this.getContentPane().setBackground(new Color(0xffeaa7)); // Basina 0x koyarak istedigimiz rengin kodunu yazabiliriz
+		this.setResizable(false); // Frame'in boyutunun degistirilmemesi
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // x'e basildiginda uygulamanin kapanmasi/sonlanmasi
 		this.setLayout(null);
 		this.setVisible(true);
-	    this.setLocationRelativeTo(null); // Arayüz ekranýn ortasýnda baþlar 
+	    this.setLocationRelativeTo(null); // ArayÃ¼z ekranin ortasinda baslar 
 	}
 
 	public static void main(String[] args) {	
 
-		TasKagitMakas frame = new TasKagitMakas(); // frame class'ýnýn tanýmlanmasý
+		TasKagitMakas frame = new TasKagitMakas(); // frame class'inin tanimlanmasi
 		
 	}
 
@@ -129,11 +129,11 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 			
 			bilgisayar = (int)(Math.random() * 3);
 			if (bilgisayar == 0) {
-				pcJLabel.setText("TAÞ");
+				pcJLabel.setText("TAS");
 				pcJLabel.setVisible(true);
 			}
 			else if (bilgisayar == 1) {
-				pcJLabel.setText("KAÐIT");
+				pcJLabel.setText("KAGIT");
 				pcJLabel.setVisible(true);
 			}
 			else {
@@ -148,12 +148,12 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 		}
 
 		else if (e.getSource().equals(tasButton)) {
-			oyuncuJLabel.setText("TAÞ");
+			oyuncuJLabel.setText("TAS");
 			oyuncuJLabel.setVisible(true);
 			human = 0;
 		}
 		else if (e.getSource().equals(kagitButton)) {
-			oyuncuJLabel.setText("KAÐIT");
+			oyuncuJLabel.setText("KAGIT");
 			oyuncuJLabel.setVisible(true);
 			human = 1;
 		}
@@ -170,7 +170,7 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 			oyuncuJLabel.setVisible(false);
 		}
 		else if (human == 0 && bilgisayar == 1 || human == 1 && bilgisayar == 2 || human == 2 && bilgisayar == 0) {
-			JOptionPane.showMessageDialog(oynaButton, "Bilgisayar Kazandý");
+			JOptionPane.showMessageDialog(oynaButton, "Bilgisayar Kazandi");
 			pcJLabel.setVisible(false);
 			oyuncuJLabel.setVisible(false);
 			
@@ -178,12 +178,12 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 			bilgisayarJLabel.setText("Bilgisayar: " + bilgisayar_puan);
 			
 			if (bilgisayar_puan == 5) {
-				JOptionPane.showMessageDialog(null, "Oyunun Kazanýný Bilgisayar oldu...");
+				JOptionPane.showMessageDialog(null, "Oyunun Kazanini Bilgisayar oldu...");
 				System.exit(0);
 			}
 		}
 		else if (human == 0 && bilgisayar == 2 || human == 1 && bilgisayar == 0 || human == 2 && bilgisayar == 1) {
-			JOptionPane.showMessageDialog(oynaButton, "Oyuncu Kazandý");
+			JOptionPane.showMessageDialog(oynaButton, "Oyuncu Kazandi");
 			pcJLabel.setVisible(false);
 			oyuncuJLabel.setVisible(false);
 			
@@ -191,7 +191,7 @@ public class TasKagitMakas extends JFrame implements ActionListener{
 			oyuncu.setText("Oyuncu: " + oyuncu_puan);
 			
 			if (oyuncu_puan == 5) {		
-				JOptionPane.showMessageDialog(null, "Oyunun Kazanýný Oyuncu oldu...");
+				JOptionPane.showMessageDialog(null, "Oyunun Kazanini Oyuncu oldu...");
 				System.exit(0);
 			}
 		}
